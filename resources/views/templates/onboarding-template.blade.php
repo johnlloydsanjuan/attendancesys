@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="image/x-icon" href="{{ asset('mddrmo_favicon.ico') }}" rel="icon">
-    <link href="{{ asset('css/myBuiltinFramework.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/importants/myBuiltinFramework.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/importants/components.css') }}" rel="stylesheet">
+    @include("templates.css-call")
     <title>
         @php
             if($goInto == "login"){
@@ -23,8 +25,7 @@
 <body class="bg-primary">
 
     @if ($goInto == "login")
-        @include('login')
-
+        @include("login")
     @elseif ($goInto == "register")
 
 

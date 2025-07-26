@@ -1,0 +1,31 @@
+/* ============== INPUT FLOAT LABEL ============== */
+.input-float-label-holder{
+    position: relative;
+}
+
+.input-float{
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+
+.input-float-label{
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+.input-float:focus~.input-float-label{
+    top: -20px;
+    font-size: 14px;
+    color: blue;
+}
+
+.input-float:focus{
+    border-width: 2px;
+    color: blue;
+}
