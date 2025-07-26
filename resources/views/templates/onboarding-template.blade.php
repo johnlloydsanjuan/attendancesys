@@ -8,15 +8,27 @@
     <link type="image/x-icon" href="{{ asset('mddrmo_favicon.ico') }}" rel="icon">
     <link href="{{ asset('css/myBuiltinFramework.css') }}" rel="stylesheet">
     <title>
-        Test
+        @php
+            if($goInto == "login"){
+                echo "Login - Attendance System";
+            } elseif ($goInto == "register") {
+                echo "Register - Attendance System";
+            } else {
+                echo "Forgot Password - Attendance System";
+            }
+        @endphp
     </title>
 </head>
 
-<body>
-    <div>
-        <h1>testtt</h1>
-    </div>
+<body class="bg-primary">
 
+    @if ($goInto == "login")
+        @include('login')
+
+    @elseif ($goInto == "register")
+
+
+    @endif
 
 
     <script src="{{ asset('js/jQuery/jquery-3.7.1.min.js') }}"></script>

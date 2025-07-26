@@ -8,6 +8,11 @@ class PublicController extends Controller
 {
     public function home(Request $request){
         $data = [];
-        return view('home', $data);
+        $goInto = "login"; //for default
+
+        $data['goInto'] = $goInto = "login";
+
+
+        return view('templates.onboarding-template', $data);
     }
 }
