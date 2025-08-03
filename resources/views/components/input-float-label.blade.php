@@ -4,11 +4,18 @@
     'id' => '',
     'name' => '',
     'class' => '',
-    'labelClass' => ''
+    'labelClass' => '',
 ])
 
-
 <div class="input-float-label-holder">
-    <input type="{{ $type }}" class="input-float {{ $class }}" name="{{ $name }}" id="{{ $id }}" placeholder=" ">
-    <label for="{{ $id }}" class="input-float-label {{ $labelClass }}">{{ $inputTitle }}</label>
+    @if ($type == 'password')
+        <input class="input-float {{ $class }}" id="{{ $id }}" name="{{ $name }}"
+            type="{{ $type }}" placeholder=" ">
+        <label class="input-float-label {{ $labelClass }}" for="{{ $id }}">{{ $inputTitle }}</label>
+        <i class="fa-regular fa-eye-slash toggle-password"></i>
+    @else
+        <input class="input-float {{ $class }}" id="{{ $id }}" name="{{ $name }}"
+            type="{{ $type }}" placeholder=" ">
+        <label class="input-float-label {{ $labelClass }}" for="{{ $id }}">{{ $inputTitle }}</label>
+    @endif
 </div>

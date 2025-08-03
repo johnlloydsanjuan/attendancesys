@@ -4,6 +4,6 @@
         <x-input-float-label inputTitle="Password" id="test" name="test" />
         <x-input-float-label inputTitle="haha" id="test" name="test" />
         <x-input-float-label inputTitle="Pastessword" id="test" name="test" />
-        <x-input-float-label inputTitle="teeest" id="test" name="test" />
+        <x-input-float-label inputTitle="teeest" id="test" name="test" type="password" />
     </div>
 </div>

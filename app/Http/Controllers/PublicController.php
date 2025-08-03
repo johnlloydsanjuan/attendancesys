@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
     public function home(Request $request){
         $data = [];
+        $systemName = "Attendance System";
+        $dateTime = Carbon::now();
         $goInto = "login"; //for default
-        $cssGoInto = "login";
 
         $data['goInto'] = $goInto;
-        $data['cssGoInto'] = $cssGoInto;
+        $data['htmlTitle'] = "Login - $systemName";
 
         return view('templates.onboarding-template', $data);
     }
