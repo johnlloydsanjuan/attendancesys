@@ -24,7 +24,7 @@
     @endswitch
 
     <script src="{{ asset('js/jQuery/jquery-3.7.1.min.js') }}"></script>
-    @include('')
+    @include('templates.js-call')
 </body>
 
 </html>
