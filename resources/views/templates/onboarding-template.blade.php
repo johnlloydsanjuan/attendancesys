@@ -18,9 +18,14 @@
         @case('login')
             @include('login')
         @break
-
+        @case('register')
+            @include('register')
+        @break
+        @case('forgpass')
+            @include('forgetpassword')
+        @break
         @default
-
+            @include('login')
     @endswitch
 
     <script src="{{ asset('js/jQuery/jquery-3.7.1.min.js') }}"></script>

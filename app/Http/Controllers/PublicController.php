@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
-    public function home(Request $request){
+    public function login(Request $request){
         $data = [];
         $systemName = "Attendance System";
         $dateTime = Carbon::now();
@@ -15,6 +15,30 @@ class PublicController extends Controller
 
         $data['goInto'] = $goInto;
         $data['htmlTitle'] = "Login - $systemName";
+
+        return view('templates.onboarding-template', $data);
+    }
+
+    public function register(Request $request){
+        $data = [];
+        $systemName = "Attendance System";
+        $dateTime = Carbon::now();
+        $goInto = "register"; //for default
+
+        $data['goInto'] = $goInto;
+        $data['htmlTitle'] = "Register - $systemName";
+
+        return view('templates.onboarding-template', $data);
+    }
+
+    public function forgetpassword(Request $request){
+        $data = [];
+        $systemName = "Attendance System";
+        $dateTime = Carbon::now();
+        $goInto = "forgetpassword"; //for default
+
+        $data['goInto'] = $goInto;
+        $data['htmlTitle'] = "New Password - $systemName";
 
         return view('templates.onboarding-template', $data);
     }

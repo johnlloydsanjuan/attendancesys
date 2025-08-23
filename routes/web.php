@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PublicController::class, 'home'])->name('home');
+Route::get('/', [PublicController::class, 'login'])->name('login');
+Route::get('/register', [PublicController::class, 'register'])->name('register');
+Route::get('/forgetpassword', [PublicController::class, 'forgetpassword'])->name('forgetpassword');
