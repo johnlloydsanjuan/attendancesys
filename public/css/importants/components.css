@@ -7,7 +7,7 @@
 .input-float{
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 100%;
+    width: 95% !important;
     outline: none;
     border: none;
     border-bottom: 1px solid var(--black);
@@ -28,7 +28,7 @@
 
 .input-float:focus + .input-float-label,
 .input-float:not(:placeholder-shown) + .input-float-label {
-    top: -5px;
+    top: -10px;
     left: 5px;
     font-size: 12px;
     color: var(--primaryL900);

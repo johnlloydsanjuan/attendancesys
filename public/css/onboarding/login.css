@@ -1,4 +1,4 @@
-.login-content{
+.login-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-.container-glass{
+.container-glass {
     width: 1027px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -24,20 +24,22 @@
     flex-direction: row;
 }
 
-.login-container{
+.login-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     flex-basis: 50%;
+    height: 50vh;
+    padding: 40px 20px;
 }
 
-.text-container{
+.text-top {
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
 }
 
-.text-container h1{
+.text-top h1 {
     font-family: 'Poppins', sans-serif;
     color: var(--primaryL900);
     font-weight: 600;
@@ -45,7 +47,25 @@
     line-height: 0;
 }
 
-.text-container p{
+.text-top p {
     text-align: center;
     margin: 8px 0;
+}
+
+.input-container2 {
+    display: flex;
+    align-items: center;
+}
+
+.input-container2 p {
+    margin-left: 5px;
+}
+
+.input-container2 a {
+    margin-left: auto;
+    align-items: center;
+}
+
+.text-bottom {
+    margin: auto auto 0;
 }

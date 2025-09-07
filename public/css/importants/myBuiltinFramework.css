@@ -6,7 +6,7 @@
 
 :root {
 
-    
+
 
     --white: #fff;
     --black: #000;
@@ -47,6 +47,17 @@
 
 body {
     margin: 0;
+}
+
+a {
+    color: var(--primaryL900);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primaryL500);
+    transition: ease-in-out 0.2s;
 }
 
 .bg-light {
