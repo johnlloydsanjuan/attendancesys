@@ -8,8 +8,9 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="input-container">
-                        <x-input-float-label name="email" inputTitle="Email" id="loginEmail"></x-input-float-label>
-                        <x-input-float-label name="password" inputTitle="Password" type="password" id="loginPassword"></x-input-float-label>
+                        <x-input-float-label id="loginEmail" name="email" inputTitle="Email"></x-input-float-label>
+                        <x-input-float-label id="loginPassword" name="password" type="password"
+                            inputTitle="Password"></x-input-float-label>
                         <div class="input-container2">
                             <input type="checkbox">
                             <p>Remember me</p>
@@ -18,8 +19,11 @@
                     </div>
                     <div class="button-container">
                         <button>Login</button>
+                        <div class="divider">or login with</div>
+                        <button>GOOGOL</button>
                     </div>
-                    <p class="text-bottom">Do not have an account? <a href="{{ route('register') }}">Register</a> here.</p>
+                    <p class="text-bottom">Do not have an account? <a href="{{ route('register') }}">Register</a> here.
+                    </p>
                 </div>
                 <div class="info-container">
 

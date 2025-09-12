@@ -52,9 +52,15 @@
     margin: 8px 0;
 }
 
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .input-container2 {
     display: flex;
     align-items: center;
+    margin-top: 0;
 }
 
 .input-container2 p {
@@ -64,6 +70,36 @@
 .input-container2 a {
     margin-left: auto;
     align-items: center;
+}
+
+.button-container .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.button-container{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container .divider::before,
+.button-container .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #999;
+}
+
+.button-container .divider:not(:empty)::before {
+    margin-right: 10px;
+}
+
+.button-container .divider:not(:empty)::after {
+    margin-left: 10px;
 }
 
 .text-bottom {

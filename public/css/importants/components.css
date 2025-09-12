@@ -43,4 +43,5 @@
     right: 10px;
     top: 5px;
     cursor: pointer;
+    z-index: 100;
 }

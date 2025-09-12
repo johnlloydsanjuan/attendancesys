@@ -12,7 +12,7 @@
     <title>{{ $htmlTitle }}</title>
 </head>
 
-<body class="bg-primary">
+<body class="bg-primary bg-pan-left">
 
     @switch($goInto)
         @case('login')
@@ -29,6 +29,7 @@
     @endswitch
 
     <script src="{{ asset('js/jQuery/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('js/components.js') }}"></script>
     @include('templates.js-call')
 </body>
 
