@@ -21,6 +21,6 @@ class InputFloatLabel extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.forms.input-float-label');
+        return view('components.input-float-label');
     }
 }

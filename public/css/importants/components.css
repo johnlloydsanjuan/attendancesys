@@ -1,10 +1,11 @@
 /* ============== INPUT FLOAT LABEL ============== */
-.input-float-label-holder{
+.input-float-label-holder {
+    width: 100%;
     position: relative;
     margin-bottom: 24px;
 }
 
-.input-float{
+.input-float {
     padding: 10px 10px 10px 5px;
     display: block;
     width: 95% !important;
@@ -14,7 +15,7 @@
     background-color: transparent;
 }
 
-.input-float-label{
+.input-float-label {
     position: absolute;
     left: 5px;
     top: 10px;
@@ -26,22 +27,96 @@
     background: transparent;
 }
 
-.input-float:focus + .input-float-label,
-.input-float:not(:placeholder-shown) + .input-float-label {
+.input-float:focus+.input-float-label,
+.input-float:not(:placeholder-shown)+.input-float-label {
     top: -10px;
     left: 5px;
     font-size: 12px;
     color: var(--primaryL900);
 }
 
-.input-float:focus{
+.input-float:focus {
     border-width: 0 0 2px 0;
 }
 
-.input-float-label-holder .toggle-password{
+.input-float-label-holder .toggle-password {
     position: absolute;
     right: 10px;
     top: 5px;
     cursor: pointer;
     z-index: 100;
+}
+
+
+/* ============== INPUT FLOAT LABEL ============== */
+.button-holder {
+    width: 100%;
+}
+
+.button-holder .button {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter';
+    padding: 12px 0;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+    background-color: var(--white);
+    border: solid 1px var(--black);
+}
+
+.button-holder .button-primary {
+    background-color: var(--primaryL900);
+    color: var(--white);
+}
+
+.button-holder .button-secondary {
+    background-color: var(--secondaryL900);
+    color: var(--white);
+}
+
+.button-holder .button-red {
+    background-color: var(--dangerL700);
+    color: var(--white);
+}
+
+.button-holder .button-green {
+    background-color: var(--successL700);
+    color: var(--white);
+}
+
+.button-holder .button-yellow {
+    background-color: var(--warningL700);
+    color: var(--black);
+}
+
+.button-holder .icon-default, .button-holder .icon-left {
+    margin-right: 5px;
+}
+
+.button-holder .icon-right {
+    margin-left: 5px;
+}
+
+.button-holder .button:hover {
+    -webkit-animation: shadow-drop 0.25s ease-in-out both;
+    animation: shadow-drop 0.25s ease-in-out both;
+}
+
+@keyframes shadow-drop {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translateZ(50px);
+        transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35);
+    }
 }

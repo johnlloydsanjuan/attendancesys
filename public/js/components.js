@@ -1,3 +1,5 @@
+// ================= INPUT FLOAT LABEL =================
+
 $(document).on("click", ".toggle-password", function () {
     let inputid = $(this).prevAll().eq(1).attr("id");
     let input = $("#" + inputid);
@@ -10,3 +12,5 @@ $(document).on("click", ".toggle-password", function () {
         $(this).removeClass("fa-eye").addClass("fa-eye-slash");
     }
 });
+
+// ================= BUTTON =================
