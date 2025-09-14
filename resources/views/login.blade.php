@@ -17,9 +17,9 @@
                         </div>
                     </div>
                     <div class="button-container">
-                        <x-button class="button-primary" iconPosition="right">Login</x-button>
+                        <x-button class="loginButton button-primary">Login</x-button>
                         <div class="divider">or login with</div>
-                        <x-button class="" icon="fa-brands fa-google">Google</x-button>
+                        <x-button class="googleButton" icon="fa-brands fa-google">Google</x-button>
                     </div>
                     <p class="text-bottom">Do not have an account? <a href="{{ route('register') }}">Register</a> here.
                     </p>

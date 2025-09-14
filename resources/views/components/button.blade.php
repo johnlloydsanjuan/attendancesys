@@ -2,20 +2,28 @@
     'class' => '',
     'id' => '',
     'name' => '',
-    'type' => 'submit',
+    'type' => 'button',
     'icon' => null,
     'iconPosition' => 'default',
 ])
 
 
 <div class="button-holder">
-    <button class="button {{ $class }}" id="{{ $id }}" name="{{ $name }}" type="{{ $type }}">
+    <button class="button {{ $class }}" id="{{ $id }}" name="{{ $name }}"
+        type="{{ $type }}">
         @if ($icon && ($iconPosition == 'default' || $iconPosition == 'left'))
-        <i class="{{ $icon }} icon-{{ $iconPosition }}"></i>
+            <i class="{{ $icon }} icon-{{ $iconPosition }}"></i>
         @endif
-        {{ $slot }}
+        <span class="button-text">{{ $slot }}</span>
         @if ($icon && $iconPosition == 'right')
-        <i class="{{ $icon }} icon-{{ $iconPosition }}"></i>
+            <i class="{{ $icon }} icon-{{ $iconPosition }}"></i>
         @endif
+        <section class="button-loader" style="display:none">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </section>
     </button>
 </div>

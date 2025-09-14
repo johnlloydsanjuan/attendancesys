@@ -48,7 +48,7 @@
 }
 
 
-/* ============== INPUT FLOAT LABEL ============== */
+/* ============== BUTTON ============== */
 .button-holder {
     width: 100%;
 }
@@ -100,6 +100,12 @@
     margin-left: 5px;
 }
 
+
+
+
+/* ================== ANIMATIONS ================== */
+
+/* BUTTON HOVER */
 .button-holder .button:hover {
     -webkit-animation: shadow-drop 0.25s ease-in-out both;
     animation: shadow-drop 0.25s ease-in-out both;
@@ -107,16 +113,105 @@
 
 @keyframes shadow-drop {
     0% {
-        -webkit-transform: translateZ(0);
         transform: translateZ(0);
-        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 
     100% {
-        -webkit-transform: translateZ(50px);
         transform: translateZ(50px);
-        -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.35);
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/* BUTTON LOADER */
+
+.button-holder .button-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin-right: 6px;
+    border-radius: 8px;
+    background-color: #B3CFF0;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.6);
+        background-color: #B3CFF0;
+        box-shadow: 0 0 0 0 rgba(0, 95, 204, 0.7);
+    }
+
+    50% {
+        transform: scale(1);
+        background-color: #669FE0;
+        box-shadow: 0 0 0 10px rgba(0, 95, 204 0);
+    }
+
+    100% {
+        transform: scale(0.6);
+        background-color: #B3CFF0;
+        box-shadow: 0 0 0 0 rgba(0, 95, 204, 0.7);
+    }
+}
+
+/* BUTTON ERROR */
+
+.button-error {
+    animation: shake-horizontal 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes shake-horizontal {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-4px);
+        opacity: 0.7;
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateX(4px);
+    }
+
+    80% {
+        transform: translateX(2%);
+        opacity: 0.7;
+    }
+
+    90% {
+        transform: translateX(-2%);
+        opacity: 1;
     }
 }

@@ -1,5 +1,4 @@
 // ================= INPUT FLOAT LABEL =================
-
 $(document).on("click", ".toggle-password", function () {
     let inputid = $(this).prevAll().eq(1).attr("id");
     let input = $("#" + inputid);
@@ -14,3 +13,30 @@ $(document).on("click", ".toggle-password", function () {
 });
 
 // ================= BUTTON =================
+function startButtonLoading(button){
+    button.prop('disabled', true).css({
+        cursor: 'not-allowed',
+        backgroundColor: '#005fcc80'
+    });
+
+    button.find('.button-text').hide();
+    button.find('.button-loader').show();
+}
+
+function endButtonLoading(button){
+    button.prop('disabled', false).css({
+        cursor: 'pointer',
+        backgroundColor: '#005fcc'
+    });
+
+    button.find('.button-text').show();
+    button.find('.button-loader').hide();
+}
+
+function buttonShake(button){
+    button.addClass('button-error');
+
+    setTimeout(function(){
+        button.removeClass('button-error');
+    }, 1000)
+}
