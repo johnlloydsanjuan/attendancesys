@@ -8,8 +8,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="input-container">
-                        <x-input-float-label id="loginEmail" name="email">Email</x-input-float-label>
-                        <x-input-float-label id="loginPassword" name="password" type="password">Password</x-input-float-label>
+                        <x-input-float-label id="loginEmail" name="loginEmail">Email</x-input-float-label>
+                        <x-input-float-label id="loginPassword" name="loginPassword" type="password">Password</x-input-float-label>
                         <div class="input-container2">
                             <input type="checkbox">
                             <p>Remember me</p>

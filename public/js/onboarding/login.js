@@ -1,15 +1,30 @@
 $(document).on('click', '.loginButton', function(){
-    loginBtn = $(this);
-    startButtonLoading(loginBtn);
-    buttonShake(loginBtn);
+    thisBtn = $(this);
+    emailInput = $('#loginEmail');
+    passwordInput = $('#loginPassword');
+    emailInputval = $('#loginEmail').val();
+    passwordInputval = $('#loginPassword').val();
+    startButtonLoading(thisBtn);
 
-    setTimeout(function(){
-        endButtonLoading(loginBtn);
-    }, 2000);
+
+    if((emailInputval == null || emailInputval == "") && (passwordInputval == null || passwordInputval == "")){
+        if(emailInputval == null || emailInputval == ""){
+            inputError(emailInput);
+        }
+        if(passwordInputval == null || passwordInputval == ""){
+            inputError(passwordInput);
+        }
+        buttonShake(thisBtn);
+        endButtonLoading(thisBtn);
+    }
+
+    // setTimeout(function(){
+    //     endButtonLoading(thisBtn);
+    // }, 2000);
 })
 
 $(document).on('click', '.googleButton', function(){
-    loginBtn = $(this);
-    buttonShake(loginBtn);
+    thisBtn = $(this);
+    buttonShake(thisBtn);
 
 })

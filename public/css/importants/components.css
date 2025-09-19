@@ -47,6 +47,20 @@
     z-index: 100;
 }
 
+.input-error{
+    border-bottom: 1px solid var(--dangerL700);
+    transition: all ease-in-out 0.5s;
+}
+
+.input-error-label{
+    color: var(--dangerL700);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.input-error-icon{
+    color: var(--dangerL700);
+}
 
 /* ============== BUTTON ============== */
 .button-holder {
@@ -99,9 +113,6 @@
 .button-holder .icon-right {
     margin-left: 5px;
 }
-
-
-
 
 /* ================== ANIMATIONS ================== */
 
@@ -181,6 +192,7 @@
 /* BUTTON ERROR */
 
 .button-error {
+    background-color: var(--dangerL700) !important;
     animation: shake-horizontal 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 

@@ -64,7 +64,7 @@ a:hover {
 .bg-primary {
     background-color: var(--primaryL500);
     /* background: radial-gradient(circle,rgba(0, 95, 204, 0.64) 0%, rgba(255, 241, 204, 0.74) 24%, rgba(255, 203, 166, 0.69) 56%, rgba(85, 142, 207, 1) 100%); */
-    background: radial-gradient(circle, rgba(0, 95, 204, 0.64) 0%, rgba(255, 241, 204, 1) 100%, rgba(255, 203, 166, 0.95) 68%, rgba(85, 142, 207, 1) 40%);
+    background: radial-gradient(circle,rgba(0, 95, 204, 0.64) 0%, rgba(255, 241, 204, 1) 100%, rgba(255, 203, 166, 0.77) 90%, rgba(85, 142, 207, 1) 43%);
 }
 
 .bg-dark {

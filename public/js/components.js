@@ -13,30 +13,42 @@ $(document).on("click", ".toggle-password", function () {
 });
 
 // ================= BUTTON =================
-function startButtonLoading(button){
-    button.prop('disabled', true).css({
-        cursor: 'not-allowed',
-        backgroundColor: '#005fcc80'
+function startButtonLoading(button) {
+    button.prop("disabled", true).css({
+        cursor: "not-allowed",
+        backgroundColor: "#005fcc80",
     });
 
-    button.find('.button-text').hide();
-    button.find('.button-loader').show();
+    button.find(".button-text").hide();
+    button.find(".button-loader").show();
 }
 
-function endButtonLoading(button){
-    button.prop('disabled', false).css({
-        cursor: 'pointer',
-        backgroundColor: '#005fcc'
+function endButtonLoading(button) {
+    button.prop("disabled", false).css({
+        cursor: "pointer",
+        backgroundColor: "#005fcc",
     });
 
-    button.find('.button-text').show();
-    button.find('.button-loader').hide();
+    button.find(".button-text").show();
+    button.find(".button-loader").hide();
 }
 
-function buttonShake(button){
-    button.addClass('button-error');
+function buttonShake(button) {
+    button.addClass("button-error");
 
-    setTimeout(function(){
-        button.removeClass('button-error');
-    }, 1000)
+    setTimeout(function () {
+        button.removeClass("button-error");
+    }, 1000);
+}
+
+function inputError(input) {
+    input.addClass("input-error");
+    input.next().addClass("input-error-label");
+    input.next().next().addClass("input-error-icon");
+
+    setTimeout(function () {
+        input.removeClass("input-error");
+        input.next().removeClass("input-error-label");
+        input.next().next().removeClass("input-error-icon");
+    }, 2000);
 }
